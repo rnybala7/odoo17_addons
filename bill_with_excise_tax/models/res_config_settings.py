@@ -16,7 +16,7 @@ class ResConfigSettings(models.TransientModel):
 
     purchase_account_id = fields.Many2one(
         "account.account",
-        string="Purchase Discount Account",
+        string="Purchase Excise Account",
         check_company=True,
         domain=[("excise_account", "=", True)],
         readonly=False,
