@@ -164,7 +164,7 @@ class account_move(models.Model):
                 if len(l or []) == 0 and account:
 
                     excise_vals = {
-                        "account_id": account,
+                        "account_id": res_config.purchase_account_id.id,
                         "quantity": 1,
                         "price_unit": res.excise_amt_line,
                         "name": "Excise Tax",
